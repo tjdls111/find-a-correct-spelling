@@ -15,3 +15,19 @@ for (let i of img){
     console.log(i);
     randomPosition(i,200,200);
 }
+
+const start_end_Btn=document.querySelector('.start_end_Btn');
+let stOrend='Start';
+
+start_end_Btn.addEventListener('click',(event)=>
+{
+    if (stOrend=="Start"){
+        start_end_Btn.innerText="Finish😅";
+        stOrend='Finish';
+    }
+    else
+    {
+        start_end_Btn.innerText="Start🍒";
+        stOrend='Start';
+    }
+});
