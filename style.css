@@ -7,6 +7,16 @@ body{
     background-image: url("backgroundPic.png");
 }
 
+.start_end_Btn{
+    outline: none;
+    background-color: #FB8C99;
+    color: wheat;
+    font-size: 50px;
+    cursor:pointer;
+    position: fixed;
+    top:20px;
+    right:50%;
+}
 
 img{
     max-width: 200px;
