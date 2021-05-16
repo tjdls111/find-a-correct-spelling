@@ -1,12 +1,20 @@
 * {
     margin: 0;
+    padding:0;
 }
 
 body{
     background-image: url("backgroundPic.png");
 }
 
+
+img{
+    max-width: 200px;
+    max-height: 200px;
+    height: auto;
+}
+
 .gameZome{
-    height: 80%;
-    width: 80%;
+    height: 570px;
+    width: 850px;
 }
