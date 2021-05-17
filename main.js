@@ -73,6 +73,9 @@ function finish(){
     if (window.confirm("다시 도전하실래요?")) {
         location.reload();
       }
+    else{
+        location.reload();
+    }
 
 }
 
@@ -103,6 +106,8 @@ function start(){
         else if (event.target.className=="True")
         {
             cnt+=1;
+            console.log(event);
+            event.target.remove();
             checkWin(4,cnt); 
         }
     });
