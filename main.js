@@ -4,7 +4,7 @@ function getRandomNum(min, max) {
 
 function randomPosition(img, imgWidth,imgHeight){
     const xPos=getRandomNum(0,window.innerWidth-imgWidth);
-    const yPos=getRandomNum(100,window.innerHeight-imgHeight);
+    const yPos=getRandomNum(150,window.innerHeight-imgHeight);
     img.style.transform=`translate(${xPos}px, ${yPos}px)`;
     console.log(`${xPos}, ${yPos}`);
 }
@@ -38,10 +38,34 @@ let timer=document.querySelector('.timer');
 function countDown(timeLimit){
     let time=timeLimit;
     setInterval(()=>{
-        timer.innerHTML=`${time}초`;
-        console.log(`${time}`);
-        time--;
+        if (time<0)
+        {
+            timer.innerHTML='Game Over';
+            return;
+        }
+        else
+        {
+            timer.innerHTML=`${time}초`;
+            //console.log(`${time}`);
+            time--;
+        }
+
     },1000);    
 }
 
 countDown(60);
+
+game_zone=document.querySelector('.gameZone');
+
+let cnt=0;
+game_zone.addEventListener('click',(event)=>{
+    if (event.target.className=="False")
+    {
+    }
+    else if (event.target.className=="True")
+    {
+        cnt+=1;
+        
+    }
+    
+});

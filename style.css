@@ -32,7 +32,9 @@ header{
     border: solid black;
     color: wheat;
     font-size: 50px;
+    max-height: 65px;
     position: fixed;
+    padding:0 1%;
     top:5%;
     right:70%;
 
@@ -42,9 +44,10 @@ header{
 img{
     max-width: 200px;
     max-height: 200px;
+    cursor:pointer;
 }
 
 .gameZome{
-    height: 570px;
-    width: 850px;
+    height: 100vh;
+    width: 100vw;
 }
