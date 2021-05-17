@@ -60,12 +60,12 @@ function checkWin(correctNum,cnt){
 
 
 function ifWin(){
-    alert("와우! 당신은 맞춤법 왕인가요?!");
+    alert("와우! 당신은 맞춤법 왕인가요?! 👑");
     finish();
 }
 
 function ifLose(){
-    alert("아쉽게 실패했네요 ");
+    alert("아쉽게 실패했네요😢");
     finish();
 }
 
