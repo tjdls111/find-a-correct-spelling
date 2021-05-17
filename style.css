@@ -45,6 +45,7 @@ img{
     max-width: 200px;
     max-height: 200px;
     cursor:pointer;
+    display:none;
 }
 
 .gameZome{

@@ -6,15 +6,10 @@ function randomPosition(img, imgWidth,imgHeight){
     const xPos=getRandomNum(0,window.innerWidth-imgWidth);
     const yPos=getRandomNum(150,window.innerHeight-imgHeight);
     img.style.transform=`translate(${xPos}px, ${yPos}px)`;
+    img.style.display='block';
     console.log(`${xPos}, ${yPos}`);
 }
 
-let img=document.querySelectorAll('img');
-console.log(img);
-for (let i of img){
-    console.log(i);
-    randomPosition(i,200,200);
-}
 
 const start_end_Btn=document.querySelector('.start_end_Btn');
 let stOrend='Start';
@@ -84,6 +79,13 @@ const game_zone=document.querySelector('.gameZone');
 
 
 function start(){
+
+    let img=document.querySelectorAll('img');
+    console.log(img);
+    for (let i of img){
+        console.log(i);
+        randomPosition(i,200,200);
+    }
 
     countDown(60);
 
