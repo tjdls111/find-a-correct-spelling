@@ -6,7 +6,7 @@ function randomPosition(img, imgWidth,imgHeight){
     const xPos=getRandomNum(0,window.innerWidth-imgWidth);
     const yPos=getRandomNum(150,window.innerHeight-imgHeight);
     img.style.transform=`translate(${xPos}px, ${yPos}px)`;
-    img.style.display='block';
+    img.style.display='inline';
     console.log(`${xPos}, ${yPos}`);
 }
 
@@ -34,17 +34,17 @@ let timer=document.querySelector('.timer');
 
 function countDown(timeLimit){
     let time=timeLimit;
-    setInterval(()=>{
+    
+    let interval= setInterval(()=>{
         if (time<0)
         {
             timer.innerHTML='Game Over';
             ifLose();
-            return;
+            clearInterval(interval);
         }
         else
         {
             timer.innerHTML=`${time}초`;
-            //console.log(`${time}`);
             time--;
         }
 
@@ -60,17 +60,17 @@ function checkWin(correctNum,cnt){
 
 
 function ifWin(){
-
-
+    alert("와우! 당신은 맞춤법 왕인가요?!");
+    finish();
 }
 
 function ifLose(){
-
-
+    alert("아쉽게 실패했네요.");
+    finish();
 }
 
 function finish(){
-
+    timer.display='none';
 
 }
 
