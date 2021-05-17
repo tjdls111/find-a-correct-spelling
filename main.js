@@ -24,11 +24,13 @@ start_end_Btn.addEventListener('click',(event)=>
     if (stOrend=="Start"){
         start_end_Btn.innerText="Finish😅";
         stOrend='Finish';
+        start();
     }
     else
     {
         start_end_Btn.innerText="Start🍒";
         stOrend='Start';
+        ifLose();
     }
 });
 
@@ -41,6 +43,7 @@ function countDown(timeLimit){
         if (time<0)
         {
             timer.innerHTML='Game Over';
+            ifLose();
             return;
         }
         else
@@ -53,19 +56,50 @@ function countDown(timeLimit){
     },1000);    
 }
 
-countDown(60);
 
-game_zone=document.querySelector('.gameZone');
+function checkWin(correctNum,cnt){
+    if (correctNum==cnt){
+        ifWin();
+    }
+}
 
-let cnt=0;
-game_zone.addEventListener('click',(event)=>{
-    if (event.target.className=="False")
-    {
-    }
-    else if (event.target.className=="True")
-    {
-        cnt+=1;
-        
-    }
-    
-});
+
+function ifWin(){
+
+
+}
+
+function ifLose(){
+
+
+}
+
+function finish(){
+
+
+}
+
+const game_zone=document.querySelector('.gameZone');
+
+
+
+function start(){
+
+    countDown(60);
+
+    let cnt=0;
+
+    game_zone.addEventListener('click',(event)=>{
+        if (event.target.className=="False")
+        {
+            timer.innerHTML='Game Over';
+            
+        }
+        else if (event.target.className=="True")
+        {
+            cnt+=1;
+            checkWin(4,cnt); 
+        }
+    });
+}
+
