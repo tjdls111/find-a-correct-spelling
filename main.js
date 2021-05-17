@@ -70,7 +70,9 @@ function ifLose(){
 }
 
 function finish(){
-    timer.display='none';
+    if (window.confirm("다시 도전하실래요?")) {
+        location.reload();
+      }
 
 }
 
@@ -95,6 +97,7 @@ function start(){
         if (event.target.className=="False")
         {
             timer.innerHTML='Game Over';
+            ifLose();
             
         }
         else if (event.target.className=="True")
