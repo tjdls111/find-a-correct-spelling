@@ -4,7 +4,7 @@ function getRandomNum(min, max) {
 
 function randomPosition(img, imgWidth,imgHeight){
     const xPos=getRandomNum(0,window.innerWidth-imgWidth);
-    const yPos=getRandomNum(0,window.innerHeight-imgHeight);
+    const yPos=getRandomNum(100,window.innerHeight-imgHeight);
     img.style.transform=`translate(${xPos}px, ${yPos}px)`;
     console.log(`${xPos}, ${yPos}`);
 }
@@ -31,3 +31,17 @@ start_end_Btn.addEventListener('click',(event)=>
         stOrend='Start';
     }
 });
+
+
+let timer=document.querySelector('.timer');
+
+function countDown(timeLimit){
+    let time=timeLimit;
+    setInterval(()=>{
+        timer.innerHTML=`${time}초`;
+        console.log(`${time}`);
+        time--;
+    },1000);    
+}
+
+countDown(60);

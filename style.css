@@ -7,16 +7,37 @@ body{
     background-image: url("backgroundPic.png");
 }
 
+header{
+    display: flex;
+    justify-content:space-between;
+}
+
+
 .start_end_Btn{
     outline: none;
+    display: block;
     background-color: #FB8C99;
     color: wheat;
     font-size: 50px;
     cursor:pointer;
     position: fixed;
-    top:20px;
-    right:50%;
+    top:5%;
+    right:30%;
+
 }
+
+.timer{
+    background-color: #FB8C99;
+    display: block;
+    border: solid black;
+    color: wheat;
+    font-size: 50px;
+    position: fixed;
+    top:5%;
+    right:70%;
+
+}
+
 
 img{
     max-width: 200px;
