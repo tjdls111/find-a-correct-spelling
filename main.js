@@ -65,7 +65,7 @@ function ifWin(){
 }
 
 function ifLose(){
-    alert("아쉽게 실패했네요.");
+    alert("아쉽게 실패했네요 ");
     finish();
 }
 
@@ -84,6 +84,9 @@ const game_zone=document.querySelector('.gameZone');
 
 
 function start(){
+
+    let music=document.querySelector('.backgroundMusic');
+    music.play();
 
     let img=document.querySelectorAll('img');
     console.log(img);
