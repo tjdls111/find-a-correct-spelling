@@ -3,5 +3,5 @@
 - 시간이 지나거나, 틀린 맞춤법을 고르면 게임이 끝납니다.
 
 
-
-![동작 이미지](https://user-images.githubusercontent.com/68271159/118455536-0da48400-b734-11eb-943b-abc47b62c780.png)
+![작동1](https://user-images.githubusercontent.com/68271159/118454847-cae2ac00-b733-11eb-8633-c057f8fe49b8.png)
+![작동2](https://user-images.githubusercontent.com/68271159/118455536-0da48400-b734-11eb-943b-abc47b62c780.png)
